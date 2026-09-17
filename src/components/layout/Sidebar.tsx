@@ -83,7 +83,10 @@ export function Sidebar({ collapsed = false }: SidebarProps) {
           confirmLabel="Confirm"
           tone="warning"
           onCancel={() => setConfirmingLogout(false)}
-          onConfirm={() => navigate('/login')}
+          onConfirm={() => {
+            localStorage.removeItem('isAuthenticated')
+            navigate('/login')
+          }}
         />
       )}
     </aside>

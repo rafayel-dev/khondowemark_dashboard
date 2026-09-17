@@ -22,6 +22,7 @@ export default function Login() {
         className="flex flex-col gap-4"
         onSubmit={(e) => {
           e.preventDefault()
+          localStorage.setItem('isAuthenticated', 'true')
           navigate('/')
         }}
       >

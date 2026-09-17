@@ -1,5 +1,6 @@
 import { Route, Routes } from 'react-router-dom'
 import { AppLayout } from '@/components/layout/AppLayout'
+import { ProtectedRoute } from '@/routes/ProtectedRoute'
 import AccessDenied from '@/pages/auth/AccessDenied'
 import ForgotPassword from '@/pages/auth/ForgotPassword'
 import Login from '@/pages/auth/Login'
@@ -39,32 +40,34 @@ export default function App() {
       <Route path="/set-new-password" element={<SetNewPassword />} />
       <Route path="/access-denied" element={<AccessDenied />} />
 
-      <Route element={<AppLayout />}>
-        <Route path="/" element={<Dashboard />} />
-        <Route path="/notifications" element={<Notifications />} />
-        <Route path="/users" element={<Users />} />
-        <Route path="/users/:id" element={<UserDetails />} />
-        <Route path="/providers" element={<Providers />} />
-        <Route path="/providers/:id" element={<ProviderDetails />} />
-        <Route path="/providers/:providerId/services/:serviceId" element={<ServiceDetails />} />
-        <Route path="/service-category" element={<ServiceCategory />} />
-        <Route path="/service-category/new" element={<ServiceCategoryForm />} />
-        <Route path="/service-category/:id/edit" element={<ServiceCategoryForm />} />
-        <Route path="/bookings" element={<Bookings />} />
-        <Route path="/bookings/:id" element={<BookingDetails />} />
-        <Route path="/verification" element={<Verification />} />
-        <Route path="/verification/:id" element={<VerificationDetails />} />
-        <Route path="/earnings" element={<Earnings />} />
-        <Route path="/disputes" element={<Disputes />} />
-        <Route path="/disputes/:id" element={<DisputeDetails />} />
-        <Route path="/disputes/:id/resolve" element={<DisputeResolve />} />
-        <Route path="/help-support" element={<HelpSupport />} />
-        <Route path="/help-support/:id" element={<HelpSupportDetails />} />
-        <Route path="/manage-faq" element={<ManageFaq />} />
-        <Route path="/terms" element={<Terms />} />
-        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-        <Route path="/legal-company" element={<LegalCompany />} />
-        <Route path="/profile" element={<ManageProfile />} />
+      <Route element={<ProtectedRoute />}>
+        <Route element={<AppLayout />}>
+          <Route path="/" element={<Dashboard />} />
+          <Route path="/notifications" element={<Notifications />} />
+          <Route path="/users" element={<Users />} />
+          <Route path="/users/:id" element={<UserDetails />} />
+          <Route path="/providers" element={<Providers />} />
+          <Route path="/providers/:id" element={<ProviderDetails />} />
+          <Route path="/providers/:providerId/services/:serviceId" element={<ServiceDetails />} />
+          <Route path="/service-category" element={<ServiceCategory />} />
+          <Route path="/service-category/new" element={<ServiceCategoryForm />} />
+          <Route path="/service-category/:id/edit" element={<ServiceCategoryForm />} />
+          <Route path="/bookings" element={<Bookings />} />
+          <Route path="/bookings/:id" element={<BookingDetails />} />
+          <Route path="/verification" element={<Verification />} />
+          <Route path="/verification/:id" element={<VerificationDetails />} />
+          <Route path="/earnings" element={<Earnings />} />
+          <Route path="/disputes" element={<Disputes />} />
+          <Route path="/disputes/:id" element={<DisputeDetails />} />
+          <Route path="/disputes/:id/resolve" element={<DisputeResolve />} />
+          <Route path="/help-support" element={<HelpSupport />} />
+          <Route path="/help-support/:id" element={<HelpSupportDetails />} />
+          <Route path="/manage-faq" element={<ManageFaq />} />
+          <Route path="/terms" element={<Terms />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/legal-company" element={<LegalCompany />} />
+          <Route path="/profile" element={<ManageProfile />} />
+        </Route>
       </Route>
     </Routes>
   )
