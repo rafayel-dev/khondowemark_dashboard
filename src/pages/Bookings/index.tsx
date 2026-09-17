@@ -1,4 +1,4 @@
-import { CalendarCheck, Eye } from 'lucide-react'
+import { Eye } from 'lucide-react'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { Avatar } from '@/components/ui/Avatar'
@@ -27,7 +27,6 @@ export default function Bookings() {
     <div className="flex flex-col gap-4">
       <PageHeader
         title="Bookings"
-        icon={CalendarCheck}
         action={
           <ListToolbar
             search={search}

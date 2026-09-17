@@ -1,4 +1,3 @@
-import { AlertTriangle } from 'lucide-react'
 import { useState } from 'react'
 import { Navigate, useNavigate, useParams } from 'react-router-dom'
 import { Button } from '@/components/ui/Button'
@@ -57,7 +56,7 @@ export default function DisputeResolve() {
 
   return (
     <div className="flex flex-col gap-4">
-      <PageHeader title="Resolve Dispute" icon={AlertTriangle} subtitle="Submit your response to close this case" />
+      <PageHeader title="Resolve Dispute" subtitle="Submit your response to close this case" />
 
       <form onSubmit={handleSubmit} className="flex flex-col gap-6">
         <DetailCard title="Resolution">

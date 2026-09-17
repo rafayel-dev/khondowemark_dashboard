@@ -1,4 +1,4 @@
-import { Star, Tag, UserCircle } from 'lucide-react'
+import { Star, UserCircle } from 'lucide-react'
 import { Navigate, useNavigate, useParams } from 'react-router-dom'
 import { Avatar } from '@/components/ui/Avatar'
 import { Button } from '@/components/ui/Button'
@@ -18,7 +18,7 @@ export default function ServiceDetails() {
 
   return (
     <div className="flex flex-col gap-6">
-      <PageHeader title="Service Details" icon={Tag} />
+      <PageHeader title="Service Details" />
 
       <Avatar name={provider.name} src={provider.avatar} size={80} />
 

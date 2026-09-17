@@ -1,4 +1,3 @@
-import { ShieldCheck } from 'lucide-react'
 import { useState } from 'react'
 import { Navigate, useNavigate, useParams } from 'react-router-dom'
 import { Badge } from '@/components/ui/Badge'
@@ -55,7 +54,7 @@ export default function VerificationDetails() {
 
   return (
     <div className="flex flex-col gap-6">
-      <PageHeader title="Verification / KYC Details" icon={ShieldCheck} />
+      <PageHeader title="Verification / KYC Details" />
 
       <DetailCard title="Provider Information">
         <PersonRow {...request.provider} onView={() => navigate(`/providers/${request.providerId}`)} />

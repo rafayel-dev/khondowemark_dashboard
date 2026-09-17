@@ -1,4 +1,4 @@
-import { MessageCircleQuestion, Pencil, Plus, Trash2 } from 'lucide-react'
+import { Pencil, Plus, Trash2 } from 'lucide-react'
 import { useState } from 'react'
 import { Button } from '@/components/ui/Button'
 import { EmptyState } from '@/components/ui/EmptyState'
@@ -32,7 +32,6 @@ export default function ManageFaq() {
     <div className="flex flex-col gap-4">
       <PageHeader
         title="Manage FAQ"
-        icon={MessageCircleQuestion}
         action={
           <Button
             onClick={() => setEditingFaq('new')}

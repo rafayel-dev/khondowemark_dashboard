@@ -1,4 +1,4 @@
-import { Clock, Eye, Inbox, ShieldAlert, Tag, UserCheck, UserCircle, UserX } from 'lucide-react'
+import { Clock, Eye, Inbox, ShieldAlert, Tag, UserCheck, UserX } from 'lucide-react'
 import { useState } from 'react'
 import { Navigate, useNavigate, useParams } from 'react-router-dom'
 import { Avatar } from '@/components/ui/Avatar'
@@ -47,7 +47,7 @@ export default function ProviderDetailsPage() {
 
   return (
     <div className="flex flex-col gap-6">
-      <PageHeader title="Provider Details" icon={UserCircle} />
+      <PageHeader title="Provider Details" />
 
       <Avatar name={provider.name} src={provider.avatar} size={80} />
 

@@ -36,7 +36,7 @@ export default function ManageProfile() {
 
   return (
     <div className="flex flex-col gap-4">
-      <PageHeader title="Manage Profile" icon={UserCircle} />
+      <PageHeader title="Manage Profile" />
 
       {mode === 'view' && (
         <div className="flex flex-col gap-6">

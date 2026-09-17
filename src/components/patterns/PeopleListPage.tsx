@@ -1,5 +1,4 @@
 import { Eye, ShieldCheck, ShieldOff } from 'lucide-react'
-import type { LucideIcon } from 'lucide-react'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { Avatar } from '@/components/ui/Avatar'
@@ -18,13 +17,11 @@ const STATUS_OPTIONS = ['All', 'Active', 'Blocked'] as const
 
 export function PeopleListPage<T extends User>({
   title,
-  icon,
   basePath,
   data,
   setData,
 }: {
   title: string
-  icon: LucideIcon
   basePath: string
   data: T[]
   setData: React.Dispatch<React.SetStateAction<T[]>>
@@ -53,7 +50,6 @@ export function PeopleListPage<T extends User>({
     <div className="flex flex-col gap-4">
       <PageHeader
         title={title}
-        icon={icon}
         action={
           <ListToolbar
             search={search}

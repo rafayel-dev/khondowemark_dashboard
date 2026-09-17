@@ -1,4 +1,3 @@
-import { LifeBuoy } from 'lucide-react'
 import { useState } from 'react'
 import { Navigate, useNavigate, useParams } from 'react-router-dom'
 import { Badge } from '@/components/ui/Badge'
@@ -32,7 +31,7 @@ export default function HelpSupportDetails() {
 
   return (
     <div className="flex flex-col gap-4">
-      <PageHeader title="Help & Support Details" icon={LifeBuoy} />
+      <PageHeader title="Help & Support Details" />
 
       <div className="flex flex-col gap-6">
         <DetailCard title="Help & support requested by">

@@ -1,4 +1,4 @@
-import { UserCheck, UserCircle, UserX } from 'lucide-react'
+import { UserCheck, UserX } from 'lucide-react'
 import { useState } from 'react'
 import { Navigate, useParams } from 'react-router-dom'
 import { Avatar } from '@/components/ui/Avatar'
@@ -31,7 +31,7 @@ export default function UserDetailsPage() {
 
   return (
     <div className="flex flex-col gap-6">
-      <PageHeader title="User Details" icon={UserCircle} />
+      <PageHeader title="User Details" />
 
       <Avatar name={person.name} src={person.avatar} size={80} />
 

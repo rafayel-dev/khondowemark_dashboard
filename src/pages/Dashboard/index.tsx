@@ -2,7 +2,6 @@ import {
   AlertTriangle,
   Briefcase,
   Eye,
-  LayoutDashboard,
   ShieldCheck,
   ShieldOff,
   TrendingDown,
@@ -54,7 +53,7 @@ export default function Dashboard() {
 
   return (
     <div className="flex flex-col gap-4">
-      <PageHeader title="Dashboard" icon={LayoutDashboard} />
+      <PageHeader title="Dashboard" showBack={false} />
 
       <div className="grid grid-cols-1 gap-3.5 sm:grid-cols-2 xl:grid-cols-4">
         {dashboardStats.map((stat) => (

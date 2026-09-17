@@ -1,4 +1,3 @@
-import { Tags } from 'lucide-react'
 import { useState } from 'react'
 import { Navigate, useNavigate, useParams } from 'react-router-dom'
 import { Button } from '@/components/ui/Button'
@@ -43,7 +42,7 @@ export default function ServiceCategoryForm() {
 
   return (
     <div className="flex flex-col gap-4">
-      <PageHeader title="Service Category" icon={Tags} />
+      <PageHeader title="Service Category" />
 
       <div className="flex max-w-[600px] flex-col gap-5 rounded-2xl border border-border p-6">
         <div className="flex flex-col gap-1">

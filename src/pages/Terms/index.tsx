@@ -1,4 +1,3 @@
-import { ScrollText } from 'lucide-react'
 import { LegalDocumentEditor } from '@/components/patterns/LegalDocumentEditor'
 import { PageHeader } from '@/components/ui/PageHeader'
 import { useAppData } from '@/hooks/useAppData'
@@ -8,7 +7,7 @@ export default function Terms() {
 
   return (
     <div className="flex flex-col gap-4">
-      <PageHeader title="Terms & Conditions" icon={ScrollText} />
+      <PageHeader title="Terms & Conditions" />
       <LegalDocumentEditor doc={termsDocument} onSave={setTermsDocument} />
     </div>
   )

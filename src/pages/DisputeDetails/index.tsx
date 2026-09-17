@@ -1,4 +1,4 @@
-import { AlertTriangle, Clock } from 'lucide-react'
+import { Clock } from 'lucide-react'
 import { Navigate, useNavigate, useParams } from 'react-router-dom'
 import { Badge } from '@/components/ui/Badge'
 import { Button } from '@/components/ui/Button'
@@ -49,7 +49,7 @@ export default function DisputeDetails() {
 
   return (
     <div className="flex flex-col gap-4">
-      <PageHeader title="Disputes Details" icon={AlertTriangle} />
+      <PageHeader title="Disputes Details" />
       <div className="flex flex-col gap-6">
         <DetailCard title="User Information">
           <PersonRow {...dispute.customer} onView={() => navigate(`/users/${dispute.userId}`)} />

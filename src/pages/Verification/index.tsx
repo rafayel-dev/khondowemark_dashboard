@@ -1,4 +1,4 @@
-import { Eye, ShieldCheck } from 'lucide-react'
+import { Eye } from 'lucide-react'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { Avatar } from '@/components/ui/Avatar'
@@ -29,7 +29,6 @@ export default function Verification() {
     <div className="flex flex-col gap-4">
       <PageHeader
         title="Verification / KYC"
-        icon={ShieldCheck}
         action={
           <ListToolbar
             search={search}

@@ -1,4 +1,4 @@
-import { Eye, LifeBuoy } from 'lucide-react'
+import { Eye } from 'lucide-react'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { Avatar } from '@/components/ui/Avatar'
@@ -26,7 +26,6 @@ export default function HelpSupport() {
     <div className="flex flex-col gap-4">
       <PageHeader
         title="Help & Support"
-        icon={LifeBuoy}
         action={<FilterDropdown label="Filter by Status" value={statusFilter} options={STATUS_OPTIONS} onChange={setStatusFilter} />}
       />
 

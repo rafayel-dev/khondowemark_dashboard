@@ -1,4 +1,4 @@
-import { CalendarCheck, Tag } from 'lucide-react'
+import { Tag } from 'lucide-react'
 import { Navigate, useNavigate, useParams } from 'react-router-dom'
 import { Badge } from '@/components/ui/Badge'
 import { DetailCard, InfoField } from '@/components/ui/DetailCard'
@@ -19,7 +19,7 @@ export default function BookingDetails() {
 
   return (
     <div className="flex flex-col gap-6">
-      <PageHeader title="Booking Details" icon={CalendarCheck} />
+      <PageHeader title="Booking Details" />
 
       <DetailCard title="Provider Information">
         <PersonRow {...booking.provider} onView={() => navigate(`/providers/${booking.providerId}`)} />

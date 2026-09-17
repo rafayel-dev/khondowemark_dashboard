@@ -32,7 +32,7 @@ export default function Earnings() {
 
   return (
     <div className="flex flex-col gap-4">
-      <PageHeader title="Earnings" icon={Wallet} />
+      <PageHeader title="Earnings" />
 
       <div className="grid grid-cols-1 gap-3.5 md:grid-cols-2">
         <div className="flex flex-col gap-2.5 rounded-xl border border-border">

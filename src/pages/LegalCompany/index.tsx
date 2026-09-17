@@ -1,4 +1,3 @@
-import { Building2 } from 'lucide-react'
 import { useState } from 'react'
 import { Button } from '@/components/ui/Button'
 import { ConfirmDialog } from '@/components/ui/ConfirmDialog'
@@ -49,7 +48,7 @@ export default function LegalCompany() {
 
   return (
     <div className="flex flex-col gap-4">
-      <PageHeader title="Legal & Company" icon={Building2} />
+      <PageHeader title="Legal & Company" />
 
       {editing ? (
         <div className="flex max-w-[760px] flex-col gap-5 rounded-2xl border border-border p-6">

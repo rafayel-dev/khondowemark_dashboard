@@ -1,4 +1,4 @@
-import { AlertTriangle, Bell, Briefcase, ShieldCheck, UserPlus } from 'lucide-react'
+import { AlertTriangle, Briefcase, ShieldCheck, UserPlus } from 'lucide-react'
 import type { LucideIcon } from 'lucide-react'
 import { useState } from 'react'
 import { Button } from '@/components/ui/Button'
@@ -33,7 +33,6 @@ export default function Notifications() {
     <div className="flex flex-col gap-4">
       <PageHeader
         title="Notifications"
-        icon={Bell}
         action={
           <Button
             variant="ghost"

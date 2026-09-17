@@ -1,4 +1,3 @@
-import { ShieldCheck } from 'lucide-react'
 import { LegalDocumentEditor } from '@/components/patterns/LegalDocumentEditor'
 import { PageHeader } from '@/components/ui/PageHeader'
 import { useAppData } from '@/hooks/useAppData'
@@ -8,7 +7,7 @@ export default function PrivacyPolicy() {
 
   return (
     <div className="flex flex-col gap-4">
-      <PageHeader title="Privacy Policy" icon={ShieldCheck} />
+      <PageHeader title="Privacy Policy" />
       <LegalDocumentEditor doc={privacyDocument} onSave={setPrivacyDocument} />
     </div>
   )

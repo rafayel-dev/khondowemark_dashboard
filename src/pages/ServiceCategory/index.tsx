@@ -1,4 +1,4 @@
-import { Pencil, Plus, Tags, Trash2 } from 'lucide-react'
+import { Pencil, Plus, Trash2 } from 'lucide-react'
 import { Link, useNavigate } from 'react-router-dom'
 import { DataTable } from '@/components/ui/DataTable'
 import { IconButton } from '@/components/ui/IconButton'
@@ -24,7 +24,6 @@ export default function ServiceCategory() {
     <div className="flex flex-col gap-4">
       <PageHeader
         title="Service Category"
-        icon={Tags}
         action={
           <Link
             to="/service-category/new"
