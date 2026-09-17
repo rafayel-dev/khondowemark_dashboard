@@ -47,9 +47,9 @@ export default function UserDetailsPage() {
         <InfoField label="Status" value={<Badge variant={isActive ? 'success' : 'error'}>{person.status}</Badge>} />
       </DetailCard>
 
-      <Button variant={isActive ? 'dangerSolid' : 'successSolid'} className="h-[50px] w-fit px-6" onClick={() => setConfirming(true)}>
+      <Button variant={isActive ? 'dangerSolid' : 'primary'} className="h-[50px] w-fit px-6" onClick={() => setConfirming(true)}>
         {isActive ? <UserX size={18} /> : <UserCheck size={18} />}
-        {isActive ? 'Block This User' : 'Unblock This Job Seeker'}
+        {isActive ? 'Block This User' : 'Unblock This User'}
       </Button>
 
       {confirming && (

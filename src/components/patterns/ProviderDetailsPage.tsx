@@ -92,7 +92,7 @@ export default function ProviderDetailsPage() {
                 key={service.id}
                 type="button"
                 onClick={() => navigate(`/providers/${provider.id}/services/${service.id}`)}
-                className="flex items-center gap-4 border-b-[0.5px] border-border p-4 text-left last:border-b-0 hover:bg-black/[0.02]"
+                className="flex cursor-pointer items-center gap-4 border-b-[0.5px] border-border p-4 text-left last:border-b-0 hover:bg-black/[0.02]"
               >
                 <div className="flex size-10 items-center justify-center rounded-lg bg-brand-soft">
                   <Tag size={18} className="text-brand" />
@@ -112,7 +112,7 @@ export default function ProviderDetailsPage() {
         )}
       </DetailCard>
 
-      <Button variant={isActive ? 'dangerSolid' : 'successSolid'} className="h-[50px] w-fit px-6" onClick={() => setConfirming(true)}>
+      <Button variant={isActive ? 'dangerSolid' : 'primary'} className="h-[50px] w-fit px-6" onClick={() => setConfirming(true)}>
         {isActive ? <UserX size={18} /> : <UserCheck size={18} />}
         {isActive ? 'Block this Provider' : 'Unblock this Provider'}
       </Button>

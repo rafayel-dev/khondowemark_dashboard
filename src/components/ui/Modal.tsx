@@ -15,7 +15,7 @@ export function Modal({
       <div className="relative flex w-full max-w-[440px] flex-col gap-5 rounded-2xl border border-border bg-app p-6">
         <div className="flex items-center justify-between">
           <h2 className="text-lg font-bold text-text">{title}</h2>
-          <button type="button" aria-label="Close" onClick={onClose} className="text-text-soft hover:text-text">
+          <button type="button" aria-label="Close" onClick={onClose} className="cursor-pointer text-text-soft hover:text-text">
             <X size={18} />
           </button>
         </div>

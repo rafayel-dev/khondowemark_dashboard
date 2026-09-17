@@ -196,7 +196,7 @@ function ProfileAvatar({
             type="button"
             aria-label="Change profile photo"
             onClick={() => inputRef.current?.click()}
-            className="absolute -bottom-1 -right-1 flex size-7 items-center justify-center rounded-full border-2 border-app bg-success text-app"
+            className="absolute -bottom-1 -right-1 flex size-7 cursor-pointer items-center justify-center rounded-full border-2 border-app bg-success text-app"
           >
             <Camera size={13} />
           </button>

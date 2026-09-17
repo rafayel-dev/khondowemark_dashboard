@@ -24,7 +24,7 @@ export function Sidebar({ collapsed = false }: SidebarProps) {
     >
       <div
         className={cn(
-          'flex h-18 shrink-0 items-center justify-center rounded-xl bg-black/1 transition-all',
+          'flex h-16 shrink-0 items-center justify-center rounded-xl bg-black/1 transition-all',
           collapsed ? 'w-full px-2' : 'w-full px-5 py-1.5'
         )}
       >

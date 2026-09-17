@@ -15,7 +15,7 @@ export function IconButton({ variant = 'brand', className, children, ...props }:
   return (
     <button
       type="button"
-      className={cn('flex size-8 items-center justify-center rounded-lg', variants[variant], className)}
+      className={cn('flex size-8 cursor-pointer items-center justify-center rounded-lg', variants[variant], className)}
       {...props}
     >
       {children}

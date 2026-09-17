@@ -29,7 +29,7 @@ export function FilterDropdown<T extends string>({
       <button
         type="button"
         onClick={() => setOpen((o) => !o)}
-        className="flex h-10 w-[200px] items-center justify-between rounded-lg bg-black/[0.04] py-2.5 pl-4 pr-2.5 text-sm text-text-soft"
+        className="flex h-10 w-[200px] cursor-pointer items-center justify-between rounded-lg bg-black/[0.04] py-2.5 pl-4 pr-2.5 text-sm text-text-soft"
       >
         {value === 'All' ? label : value}
         <ChevronDown size={16} className={cn('transition-transform', open && 'rotate-180')} />
@@ -45,7 +45,7 @@ export function FilterDropdown<T extends string>({
                 onChange(option)
                 setOpen(false)
               }}
-              className="flex w-full items-center justify-between px-4 py-2.5 text-left text-sm text-text hover:bg-brand-soft"
+              className="flex w-full cursor-pointer items-center justify-between px-4 py-2.5 text-left text-sm text-text hover:bg-brand-soft"
             >
               {option}
               {value === option && <Check size={14} className="text-brand" />}

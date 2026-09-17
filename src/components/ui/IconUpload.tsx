@@ -16,7 +16,7 @@ export function IconUpload({ preview, onSelect }: { preview?: string; onSelect: 
       <button
         type="button"
         onClick={() => inputRef.current?.click()}
-        className="flex h-[50px] w-full items-center justify-center gap-2 rounded-xl bg-black/[0.04] text-sm text-text-soft"
+        className="flex h-[50px] w-full cursor-pointer items-center justify-center gap-2 rounded-xl bg-black/[0.04] text-sm text-text-soft"
       >
         <ImagePlus size={16} />
         Upload an SVG icon for this category.

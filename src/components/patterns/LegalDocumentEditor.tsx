@@ -73,7 +73,7 @@ export function LegalDocumentEditor({ doc, onSave }: { doc: LegalDocument; onSav
               aria-label={label}
               onMouseDown={(e) => e.preventDefault()}
               onClick={() => exec(command, value)}
-              className="flex size-7 items-center justify-center rounded text-text-soft hover:bg-black/5"
+              className="flex size-7 cursor-pointer items-center justify-center rounded text-text-soft hover:bg-black/5"
             >
               <Icon size={16} />
             </button>
@@ -83,7 +83,7 @@ export function LegalDocumentEditor({ doc, onSave }: { doc: LegalDocument; onSav
             aria-label="Insert link"
             onMouseDown={(e) => e.preventDefault()}
             onClick={handleLink}
-            className="flex size-7 items-center justify-center rounded text-text-soft hover:bg-black/5"
+            className="flex size-7 cursor-pointer items-center justify-center rounded text-text-soft hover:bg-black/5"
           >
             <Link2 size={16} />
           </button>
@@ -92,7 +92,7 @@ export function LegalDocumentEditor({ doc, onSave }: { doc: LegalDocument; onSav
             <button
               type="button"
               onClick={() => setBlockMenuOpen((open) => !open)}
-              className="flex items-center gap-1 rounded px-2 py-1 text-sm text-text hover:bg-black/5"
+              className="flex cursor-pointer items-center gap-1 rounded px-2 py-1 text-sm text-text hover:bg-black/5"
             >
               {BLOCK_OPTIONS.find((option) => option.value === blockType)?.label}
               <ChevronDown size={14} />
@@ -109,7 +109,7 @@ export function LegalDocumentEditor({ doc, onSave }: { doc: LegalDocument; onSav
                       setBlockType(option.value)
                       setBlockMenuOpen(false)
                     }}
-                    className="flex w-full px-3 py-2 text-left text-sm text-text hover:bg-brand-soft"
+                    className="flex w-full cursor-pointer px-3 py-2 text-left text-sm text-text hover:bg-brand-soft"
                   >
                     {option.label}
                   </button>

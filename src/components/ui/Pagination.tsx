@@ -17,7 +17,7 @@ export function Pagination({
         aria-label="Previous page"
         disabled={page <= 1}
         onClick={() => onPageChange(page - 1)}
-        className="flex size-[34px] items-center justify-center rounded-[7px] bg-brand text-app disabled:opacity-40"
+        className="flex size-[34px] cursor-pointer items-center justify-center rounded-[7px] bg-brand text-app disabled:cursor-not-allowed disabled:opacity-40"
       >
         <ChevronLeft size={14} />
       </button>
@@ -28,7 +28,7 @@ export function Pagination({
           type="button"
           onClick={() => onPageChange(n)}
           className={cn(
-            'flex size-[34px] items-center justify-center rounded-[7px] text-sm',
+            'flex size-[34px] cursor-pointer items-center justify-center rounded-[7px] text-sm',
             n === page ? 'border border-brand bg-brand-soft text-brand' : 'text-text-soft',
           )}
         >
@@ -41,7 +41,7 @@ export function Pagination({
         aria-label="Next page"
         disabled={page >= totalPages}
         onClick={() => onPageChange(page + 1)}
-        className="flex size-[34px] items-center justify-center rounded-[7px] bg-brand text-app disabled:opacity-40"
+        className="flex size-[34px] cursor-pointer items-center justify-center rounded-[7px] bg-brand text-app disabled:cursor-not-allowed disabled:opacity-40"
       >
         <ChevronRight size={14} />
       </button>

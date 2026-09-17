@@ -113,7 +113,7 @@ export default function Dashboard() {
           data={recentUsers}
           columns={[
             {
-              header: 'Job Seeker Name',
+              header: 'Users Name',
               width: '220px',
               render: (row) => (
                 <div className="flex items-center gap-2.5">

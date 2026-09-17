@@ -26,7 +26,7 @@ export function PasswordInput({ label, id, className, ...props }: PasswordInputP
           className="w-full bg-transparent text-sm text-text placeholder:text-text-soft focus:outline-none"
           {...props}
         />
-        <button type="button" aria-label={visible ? 'Hide password' : 'Show password'} onClick={() => setVisible((v) => !v)} className="shrink-0 text-text-soft">
+        <button type="button" aria-label={visible ? 'Hide password' : 'Show password'} onClick={() => setVisible((v) => !v)} className="shrink-0 cursor-pointer text-text-soft">
           {visible ? <EyeOff size={16} /> : <Eye size={16} />}
         </button>
       </div>

@@ -73,7 +73,7 @@ export default function VerificationDetails() {
 
       <div className="flex gap-2.5">
         {request.status !== 'Verified' && (
-          <Button variant="successSolid" className="h-[50px] px-6" onClick={() => setPendingAction('Verified')}>
+          <Button variant="primary" className="h-[50px] px-6" onClick={() => setPendingAction('Verified')}>
             Mark As Verified
           </Button>
         )}

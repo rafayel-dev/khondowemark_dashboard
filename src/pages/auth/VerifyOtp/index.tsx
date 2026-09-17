@@ -76,7 +76,7 @@ export default function VerifyOtp() {
               Resend in <span className="font-semibold text-text">{timeLabel}</span>
             </span>
           ) : (
-            <button type="button" onClick={() => setSecondsLeft(RESEND_SECONDS)} className="font-semibold text-brand">
+            <button type="button" onClick={() => setSecondsLeft(RESEND_SECONDS)} className="cursor-pointer font-semibold text-brand">
               Resend
             </button>
           )}

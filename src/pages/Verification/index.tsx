@@ -36,7 +36,7 @@ export default function Verification() {
             filterLabel="Filter by Status"
             filterValue={statusFilter}
             filterOptions={STATUS_OPTIONS}
-            onFilterChange={setStatusFilter}
+            onFilterChange={(val) => setStatusFilter(val)}
           />
         }
       />
@@ -46,7 +46,7 @@ export default function Verification() {
         data={pageData}
         columns={[
           {
-            header: 'Job Seeker Name',
+            header: 'User Name',
             width: '200px',
             render: (row) => (
               <div className="flex items-center gap-2.5">

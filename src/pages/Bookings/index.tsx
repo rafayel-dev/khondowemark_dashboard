@@ -34,7 +34,7 @@ export default function Bookings() {
             filterLabel="Filter by Status"
             filterValue={statusFilter}
             filterOptions={STATUS_OPTIONS}
-            onFilterChange={setStatusFilter}
+            onFilterChange={(val) => setStatusFilter(val)}
           />
         }
       />

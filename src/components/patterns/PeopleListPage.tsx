@@ -57,7 +57,7 @@ export function PeopleListPage<T extends User>({
             filterLabel="Filter by Status"
             filterValue={statusFilter}
             filterOptions={STATUS_OPTIONS}
-            onFilterChange={setStatusFilter}
+            onFilterChange={(val) => setStatusFilter(val)}
           />
         }
       />
@@ -67,7 +67,7 @@ export function PeopleListPage<T extends User>({
         data={pageData}
         columns={[
           {
-            header: 'Job Seeker Name',
+            header: 'User Name',
             width: '220px',
             render: (row) => (
               <div className="flex items-center gap-2.5">

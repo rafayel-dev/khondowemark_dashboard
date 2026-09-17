@@ -30,7 +30,7 @@ export function Select<T extends string>({
       <button
         type="button"
         onClick={() => setOpen((o) => !o)}
-        className="flex h-[50px] w-full items-center justify-between rounded-xl border border-border bg-app px-4 text-sm text-text focus:border-brand focus:outline-none"
+        className="flex h-[50px] w-full cursor-pointer items-center justify-between rounded-xl border border-border bg-app px-4 text-sm text-text focus:border-brand focus:outline-none"
       >
         {value}
         <ChevronDown size={16} className={cn('text-text-soft transition-transform', open && 'rotate-180')} />
@@ -46,7 +46,7 @@ export function Select<T extends string>({
                 onChange(option)
                 setOpen(false)
               }}
-              className="flex w-full items-center justify-between px-4 py-3 text-left text-sm text-text hover:bg-brand-soft"
+              className="flex w-full cursor-pointer items-center justify-between px-4 py-3 text-left text-sm text-text hover:bg-brand-soft"
             >
               {option}
               {value === option && <Check size={14} className="text-brand" />}
