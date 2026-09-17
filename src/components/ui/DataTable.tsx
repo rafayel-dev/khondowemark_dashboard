@@ -1,4 +1,5 @@
 import type { ReactNode } from 'react'
+import { EmptyState } from './EmptyState'
 
 export type Column<T> = {
   header: string
@@ -43,7 +44,11 @@ export function DataTable<T>({
           ))}
         </tbody>
       </table>
-      {data.length === 0 && <p className="p-8 text-center text-sm text-text-soft">No records found.</p>}
+      {data.length === 0 && (
+        <div className="p-4">
+          <EmptyState message="No records found." />
+        </div>
+      )}
     </div>
   )
 }

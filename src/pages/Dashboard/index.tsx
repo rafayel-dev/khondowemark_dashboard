@@ -1,7 +1,6 @@
 import {
   AlertTriangle,
   Briefcase,
-  ChevronDown,
   Eye,
   LayoutDashboard,
   ShieldCheck,
@@ -18,6 +17,7 @@ import { Avatar } from '@/components/ui/Avatar'
 import { Badge } from '@/components/ui/Badge'
 import { ConfirmDialog } from '@/components/ui/ConfirmDialog'
 import { DataTable } from '@/components/ui/DataTable'
+import { FilterDropdown } from '@/components/ui/FilterDropdown'
 import { IconButton } from '@/components/ui/IconButton'
 import { PageHeader } from '@/components/ui/PageHeader'
 import { StatCard } from '@/components/ui/StatCard'
@@ -34,11 +34,14 @@ const icons: Record<string, LucideIcon> = {
   'user-plus': UserPlus,
 }
 
+const TIMEFRAME_OPTIONS = ['Today', 'This Week', 'This Month'] as const
+
 export default function Dashboard() {
   const navigate = useNavigate()
   const showToast = useToast()
   const { users, setUsers } = useAppData()
   const [confirmTarget, setConfirmTarget] = useState<User | null>(null)
+  const [timeframe, setTimeframe] = useState<(typeof TIMEFRAME_OPTIONS)[number]>('Today')
   const recentUsers = users.slice(0, 2)
 
   function confirmToggle() {
@@ -61,14 +64,13 @@ export default function Dashboard() {
 
       <div className="flex flex-col gap-2.5 rounded-xl border border-border">
         <div className="flex h-[52px] items-center gap-10 border-b border-border px-4">
-          <h2 className="flex-1 text-lg font-bold text-text">Showing activity for today</h2>
-          <button
-            type="button"
-            className="flex w-[150px] items-center justify-between rounded-md bg-black/[0.04] py-1.5 pl-4 pr-2.5 text-xs font-semibold text-text-soft"
-          >
-            Today
-            <ChevronDown size={16} />
-          </button>
+          <h2 className="flex-1 text-lg font-bold text-text">Showing activity for {timeframe.toLowerCase()}</h2>
+          <FilterDropdown
+            label="Select timeframe"
+            value={timeframe}
+            options={TIMEFRAME_OPTIONS}
+            onChange={(val) => setTimeframe(val)}
+          />
         </div>
 
         <div className="flex flex-col pb-2.5">

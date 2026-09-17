@@ -1,6 +1,7 @@
 import { MessageCircleQuestion, Pencil, Plus, Trash2 } from 'lucide-react'
 import { useState } from 'react'
 import { Button } from '@/components/ui/Button'
+import { EmptyState } from '@/components/ui/EmptyState'
 import { IconButton } from '@/components/ui/IconButton'
 import { Modal } from '@/components/ui/Modal'
 import { PageHeader } from '@/components/ui/PageHeader'
@@ -33,14 +34,13 @@ export default function ManageFaq() {
         title="Manage FAQ"
         icon={MessageCircleQuestion}
         action={
-          <button
-            type="button"
+          <Button
             onClick={() => setEditingFaq('new')}
-            className="flex h-11 items-center gap-1.5 rounded-xl bg-brand px-6 text-sm font-semibold text-app"
+            className="gap-1.5 px-6"
           >
             <Plus size={16} />
             Add New
-          </button>
+          </Button>
         }
       />
 
@@ -62,7 +62,7 @@ export default function ManageFaq() {
             <p className="text-sm italic text-text-soft">{faq.answer}</p>
           </div>
         ))}
-        {faqs.length === 0 && <p className="p-6 text-center text-sm text-text-soft">No FAQs yet.</p>}
+        {faqs.length === 0 && <EmptyState message="No FAQs yet." />}
       </div>
 
       {editingFaq && (

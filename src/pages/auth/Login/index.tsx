@@ -1,13 +1,11 @@
-import { Eye, EyeOff } from 'lucide-react'
-import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { AuthCard } from '@/components/layout/AuthCard'
 import { Button } from '@/components/ui/Button'
 import { Input } from '@/components/ui/Input'
+import { PasswordInput } from '@/components/ui/PasswordInput'
 
 export default function Login() {
   const navigate = useNavigate()
-  const [showPassword, setShowPassword] = useState(false)
 
   return (
     <AuthCard>
@@ -28,23 +26,7 @@ export default function Login() {
       >
         <Input id="email" type="email" label="Email Address" placeholder="Enter your email address" required />
 
-        <div className="flex w-full flex-col gap-[6px]">
-          <label htmlFor="password" className="text-sm font-medium text-text">
-            Password
-          </label>
-          <div className="flex h-[50px] w-full items-center rounded-xl bg-black/[0.04] px-4">
-            <input
-              id="password"
-              type={showPassword ? 'text' : 'password'}
-              placeholder="Enter your password"
-              required
-              className="w-full bg-transparent text-sm text-text placeholder:text-text-soft focus:outline-none"
-            />
-            <button type="button" onClick={() => setShowPassword((v) => !v)} className="text-text-soft">
-              {showPassword ? <EyeOff size={16} /> : <Eye size={16} />}
-            </button>
-          </div>
-        </div>
+        <PasswordInput id="password" label="Password" placeholder="Enter your password" required />
 
         <div className="flex items-center justify-between">
           <label className="flex items-center gap-[5px] text-[15px] font-medium text-text-soft">

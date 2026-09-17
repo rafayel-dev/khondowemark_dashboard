@@ -1,6 +1,7 @@
 import { AlertTriangle, Bell, Briefcase, ShieldCheck, UserPlus } from 'lucide-react'
 import type { LucideIcon } from 'lucide-react'
 import { useState } from 'react'
+import { Button } from '@/components/ui/Button'
 import { PageHeader } from '@/components/ui/PageHeader'
 import { useToast } from '@/hooks/useToast'
 import { notifications as initialNotifications } from '@/data/notifications'
@@ -34,14 +35,14 @@ export default function Notifications() {
         title="Notifications"
         icon={Bell}
         action={
-          <button
-            type="button"
+          <Button
+            variant="ghost"
             disabled={!hasUnread}
             onClick={markAllAsRead}
-            className="flex h-9 items-center rounded-full bg-brand-soft px-4 text-xs font-semibold text-brand disabled:opacity-50"
+            className="h-9 rounded-full px-4 text-xs"
           >
             Mark all as read
-          </button>
+          </Button>
         }
       />
 

@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom'
 import { AuthCard } from '@/components/layout/AuthCard'
 import { Button } from '@/components/ui/Button'
-import { Input } from '@/components/ui/Input'
+import { PasswordInput } from '@/components/ui/PasswordInput'
 
 export default function SetNewPassword() {
   const navigate = useNavigate()
@@ -20,8 +20,8 @@ export default function SetNewPassword() {
           navigate('/login')
         }}
       >
-        <Input id="password" type="password" label="New Password" placeholder="Enter your new password" required />
-        <Input id="confirm-password" type="password" label="Confirm New Password" placeholder="Re-enter your new password" required />
+        <PasswordInput id="password" label="New Password" placeholder="Enter your new password" required />
+        <PasswordInput id="confirm-password" label="Confirm New Password" placeholder="Re-enter your new password" required />
         <Button type="submit" className="h-[50px] w-full">
           Update Password
         </Button>
